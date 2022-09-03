@@ -25,7 +25,14 @@ const loadNews = (id) => {
         .catch(error => console.log('There is a ' + error))
 }
 const displayNews = (datas) => {
-    // console.log(datas)
+    console.log(datas)
+    const searchResult = document.getElementById('search-result')
+    if(datas.length === 0){
+        searchResult.innerText=`O News Found`
+    }
+    else if(datas.length > 0){
+        searchResult.innerText=`${datas.length} News Found`
+    }
     const newsContainer = document.getElementById('news-container');
     newsContainer.textContent = ''
     datas.forEach(data => {
@@ -44,8 +51,8 @@ const displayNews = (datas) => {
                             <div class="flex items-center gap-2">
                                 <img class="author-img" src="${data.author.img}" alt="">
                                 <div class="author-details flex flex-col">
-                                    <span>${data.author.name}</span>
-                                    <span>${data.author.published_date}</span>
+                                    <span>${data.author.name ? data.author.name : "No Data Found" }</span>
+                                    <span>${data.author.published_date ? data.author.published_date : "No Data Found"}</span>
                                 </div>
                             </div>
                             <p class="text-xl font-semibold flex items-center gap-2"> <i class="fa-solid fa-eye"></i>${data.rating.number}</p>
