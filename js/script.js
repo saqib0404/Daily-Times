@@ -18,6 +18,7 @@ const displayCategoryTitle = (datas) => {
 }
 
 const loadNews = (id) => {
+    document.getElementById('spinner').classList.remove('hidden')
     console.log(id)
     fetch(`https://openapi.programming-hero.com/api/news/category/0${id}`)
         .then(res => res.json())
@@ -40,7 +41,7 @@ const displayNews = (datas) => {
         const singleNews = document.createElement('div');
         singleNews.classList.add('newses', 'w-9/12', 'mx-auto')
         singleNews.innerHTML = `
-                <div class="news md:flex gap-3 p-2">
+                <div class="news md:flex gap-3 p-2 mb-5">
                     <div class="news-img-container">
                         <img class="mx-auto news-img" src="${data.image_url}" alt="">
                     </div>
@@ -64,6 +65,7 @@ const displayNews = (datas) => {
                 </div>
         `
         newsContainer.appendChild(singleNews)
+        document.getElementById('spinner').classList.add('hidden')
     });
 }
 loadCategoryTitle()
