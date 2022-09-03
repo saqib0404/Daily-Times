@@ -26,6 +26,7 @@ const loadNews = (id) => {
         .catch(error => console.log('There is a ' + error))
 }
 const displayNews = (datas) => {
+    datas.sort((a,b)=> b.total_view - a.total_view)
     // console.log(datas)
     const searchResult = document.getElementById('search-result')
     if (datas.length === 0) {
