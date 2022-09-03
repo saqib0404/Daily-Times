@@ -90,6 +90,8 @@ const displayNewsDetails = (datas) => {
         <h3 class="font-bold text-lg">${data.title}</h3>
         <p class="py-4">Details: ${data.details}</p>
         <p>Ratings- ${data.rating.number}</p>
+        <p>Author: ${data.author.name ? data.author.name : "<i>No Data Found</i>"}</p>
+        <p>Total Views: ${data.total_view ? data.total_view : "<i>No Data Found</i>" }</p>
         `
         modalContainer.appendChild(modal)
     });
