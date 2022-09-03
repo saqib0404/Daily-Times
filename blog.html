@@ -24,11 +24,11 @@
     <!-- Header Starts From Here -->
     <header>
         <!-- Navbar -->
-        <section class="block sm:flex navbar bg-base-100 mb-10">
-            <div class="flex-1">
+        <section class="flex flex-wrap navbar bg-base-100 mb-10">
+            <div class="mx-auto md:flex-1">
                 <a class="btn btn-ghost normal-case text-3xl text-indigo-700 font-bold">Daily Times</a>
             </div>
-            <div class="mr-20 px-3 text-2xl font-semibold">
+            <div class=" mx-auto md:mr-20 md:px-3 text-2xl font-semibold">
                 <a href="index.html" class="px-5">News</a>
                 <a href="blog.html" class="px-5 text-indigo-600 underline underline-offset-8">Blogs</a>
             </div>
@@ -46,14 +46,79 @@
                 <h2 id="blog-title">Daily Times Exclusive Blogs</h2>
             </div>
 
-            <section class="Blogs w-9/12 mx-auto ">
-                <div class="blog my-4 my-5 shadow-2xl rounded-lg py-4 px-4">
+            <section class="blogs w-9/12 mx-auto ">
+                <div class="blog my-8 rounded-lg py-4 px-4">
                     <div class="blog-head text-2xl font-medium">
                         <h3>Blog-1: What are the differences between <span class="text-indigo-600">var</span>, <span
                                 class="text-indigo-600">let</span>, <span class="text-indigo-600">const</span> ?</h3>
                     </div>
                     <div class="blog-body text-xl">
-                        <span class="text-indigo-600 text-2xl">Answer:</span> sadsa
+                        <span class="text-indigo-600 text-2xl px-2">Answer:</span>
+                        The main differences between var, let, const are:
+                        <p class="px-4">
+                            var is scoped to the immediate function body. Whereas let and const are scoped to the
+                            immediate enclosing block denoted by { }. <br>
+                            var can be redeclared. Whereas let and const can not be redeclared. <br>
+                            var and let can be reassigned but const can not.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog my-8 rounded-lg py-4 px-4">
+                    <div class="blog-head text-2xl font-medium">
+                        <h3>Blog-2: What are the differences between <span class="text-indigo-600">Arrow Function</span>
+                            and <span class="text-indigo-600">Regular Function</span> ?</h3>
+                    </div>
+                    <div class="blog-body text-xl">
+                        <span class="text-indigo-600 text-2xl px-2">Answer:</span>
+                        The main differences between Arrow function and Regular function is its syntax.
+                        <p class="px-4">
+                            Inside of a regular JavaScript function, <i>'this'</i> value is dynamic. No matter how or
+                            where being executed, <i>'this'</i> value inside of an arrow function always equals
+                            this value from the outer function. In other words, the arrow function resolves this
+                            lexically. <br>
+                            In the regular function we have to right <i>'return'</i> keyword in order to return
+                            anything. In case of arrow function we can do so but if the code is of one line we can
+                            simply avoid <i>'return'</i> keyword as it is going to return anyway,
+                        </p>
+                    </div>
+                </div>
+                <div class="blog my-8 rounded-lg py-4 px-4">
+                    <div class="blog-head text-2xl font-medium">
+                        <h3>Blog-3: What are the differences between <span class="text-indigo-600">Map</span>, <span
+                                class="text-indigo-600">ForEach</span>, <span class="text-indigo-600">Filter</span> and
+                            <span class="text-indigo-600">Find</span> ?
+                        </h3>
+                    </div>
+                    <div class="blog-body text-xl">
+                        <span class="text-indigo-600 text-2xl px-2">Answer:</span>
+                        Map, ForEach, Filter and Find are all ES6 properties.
+                        <p class="px-4">
+                            map() and filter() returns a new array. Whereas forEach() returns undefined and find()
+                            return a single value. <br>
+                            map() performs it's activity then returns. forEach() also performs it's activity but doesn't
+                            return. filter() checks the condition then returns the matched results in an array. find()
+                            checks the condition and returns only the first matched element.
+                        </p>
+                    </div>
+                </div>
+                <div class="blog my-8 rounded-lg py-4 px-4">
+                    <div class="blog-head text-2xl font-medium">
+                        <h3>Blog-4: Why do we use <span class="text-indigo-600">Template String</span> ?
+                        </h3>
+                    </div>
+                    <div class="blog-body text-xl">
+                        <span class="text-indigo-600 text-2xl px-2">Answer:</span>
+                        Template String is a feature of ES6.
+                        <p class="px-4">
+                            Template String is used most commonly for string interpolation. Template literals are
+                            enclosed by backtick (`) characters instead of double or single quotes. Along with having
+                            normal strings, template literals can also contain other parts called placeholders, which
+                            are embedded expressions delimited by a dollar sign and curly braces: <i>${expression}</i>. The
+                            strings and placeholders get passed to a function — either a default function, or a function
+                            you supply. The default function (when you don't supply your own) just performs string
+                            interpolation to do substitution of the placeholders and then concatenate the parts into a
+                            single string. For this we use template string.
+                        </p>
                     </div>
                 </div>
             </section>
